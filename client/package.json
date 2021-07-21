@@ -37,9 +37,16 @@
     "@tarojs/react": "3.2.5",
     "@tarojs/runtime": "3.2.5",
     "@tarojs/taro": "3.2.5",
+    "axios": "^0.21.1",
+    "path-to-regexp": "^6.2.0",
     "lodash": "4.17.15",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
+    "react-redux": "^7.2.0",
+    "redux": "^4.0.0",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0",
+    "taro-ui": "3.0.0-alpha.10",
     "voxelcloud-utils": "^0.0.4"
   },
   "devDependencies": {
