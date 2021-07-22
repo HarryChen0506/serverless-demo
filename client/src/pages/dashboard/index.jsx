@@ -7,7 +7,7 @@ import { AtButton } from 'taro-ui'
 import { add, minus, asyncAdd } from '@/store/actions/counter'
 import { user as userHttpService } from '@/services/http'
 import { loginByWx, wxBindPhone } from '@/services/system'
-import { cloneDeep } from '@/vc-util'
+import { cloneDeep } from 'voxelcloud-utils'
 import session from '@/services/session'
 import './index.less'
 

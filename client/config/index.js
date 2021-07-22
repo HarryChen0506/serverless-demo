@@ -32,7 +32,7 @@ const config = {
     '@/store': path.resolve(__dirname, '..', 'src/store'),
     '@/services': path.resolve(__dirname, '..', 'src/services'),
     '@/package': path.resolve(__dirname, '..', 'package.json'),
-    '@/project': path.resolve(__dirname, '..', 'project.config.json'),
+    '@/project': path.resolve(__dirname, '../..', 'project.config.json'),
   },
   mini: {
     postcss: {

@@ -1,5 +1,5 @@
-import { Voxios, voxiosDefaultConfig } from '@/vc-util';
 import Taro from '@tarojs/taro'
+import { Voxios } from 'voxelcloud-utils';
 import session from '@/services/session'
 // import { logout, onThrowError } from '@/services/system';
 
@@ -30,9 +30,10 @@ const wxRequest = (options = {}, config = {}, context) => {
 
 const request = new Voxios()
   .setConfig({
-    ...voxiosDefaultConfig,
-    addAuthHeader: () => {
-      return session.getAuthHeader()
+    addHeader: () => {
+      return {
+        token: session.get()
+      }
     },
     request: wxRequest,
     isSuccess: (response) => {

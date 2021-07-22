@@ -53,6 +53,7 @@ const calcApiPrefix = () => {
   }
   return ''
 }
+
 export const path = {
   user: {
     loginWeb: `${getHost()}${calcApiPrefix()}/pub/v1/login_by_cellphone`,
@@ -70,10 +71,12 @@ export const path = {
     shareCodeImage: `${getHost()}${calcApiPrefix()}/pub/v1/miniapp/get_wxacode`,
   }
 }
+
 export const api = {
   name: 'api-config',
   API: calcApiPrefix(),
   path
 }
+
 export default api
 

@@ -1,9 +1,7 @@
-import { Session } from '@/vc-util';
+import { Session } from 'voxelcloud-utils';
 
-const session = new Session()
-  .config({
-    token: 'token',
-    authHeader: 'my-token'
-  });
+const session = new Session({
+  name: 'token'
+})
 
 export default session;

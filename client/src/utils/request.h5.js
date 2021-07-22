@@ -1,4 +1,5 @@
-import { Voxios, voxiosDefaultConfig } from '@/vc-util';
+
+import { Voxios } from 'voxelcloud-utils';
 import session from '@/services/session'
 // import { logout, onThrowError } from '@/services/system';
 
@@ -7,9 +8,10 @@ const ERROR_CODE = 'code';
 
 const request = new Voxios()
   .setConfig({
-    ...voxiosDefaultConfig,
-    addAuthHeader: () => {
-      return session.getAuthHeader()
+    addHeader: () => {
+      return {
+        token: session.get()
+      }
     },
     isSuccess: (response) => {
       const { status, data } = response;
